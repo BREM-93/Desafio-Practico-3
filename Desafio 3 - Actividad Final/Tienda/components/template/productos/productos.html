@@ -1,0 +1,90 @@
+<div class="container-fluid">
+  
+  <!--Formulario donde se buscaran las categorias-->
+  <div class="form-row">
+    
+    <!-- Select para seleccionar la categoría -->
+    <div class="form-group col-md-3 container" >
+      <select ng-model="$ctrl.currentCategoria" class="form-control">
+        <option value="0">Todos</option>
+        <option value="{{categoria.cat_id}}" ng-repeat="categoria in $ctrl.categorias">
+          {{categoria.cat_nombre}}
+        </option>
+      </select>
+    </div>
+
+    <!--Barra de busqueda para buscar por nombre-->
+    <div class="form-group col-md-6 input-group container ">
+      <div class="input-group-prepend">
+        <div class="input-group-text"><i class="bi bi-search"></i></div>
+      </div>
+      <input type="text" ng-model="$ctrl.textParam" 
+      placeholder="Buscar" class="form-control">
+    </div>
+  </div>
+
+  <!-- Filas de los productos -->
+  <div class="row row-cols-1 row-cols-md-4" id="cards">
+
+    <!-- Tarjeta de cada producto -->
+    <div class="col mb-3 card-group" ng-repeat="prod in $ctrl.getProductos()">
+      <div class="card">
+        <img ng-src="{{prod.imagen}}" class="card-img-top custom-image-size" alt="...">
+        <div class="card-body">
+          <h5 class="card-title crop-text-2">{{prod.nombre}}</h5>
+          <h6>Precio ${{prod.precio | number:2 }}</h6>
+          <p class="card-text crop-text-1" >{{prod.descripcion}}</p>
+        </div>
+        <div class="card-footer text-right">
+          
+          <!-- Botón para mostrar detalles del producto -->
+          <button type="button" class="btn btn-secondary"
+          data-toggle="modal" data-target="#detalles-modal"
+          ng-click="$ctrl.currProducto = prod">
+            Detalles
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para mostrar los detalles del producto -->
+  <div class="modal fade" id="detalles-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Detalle</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Tarjeta con los detalles del producto -->
+          <div class="card m-0 text-center"> 
+            <img ng-src="{{$ctrl.currProducto.imagen}}" class="card-img-top" alt="..." style="max-height: 350px; max-width: 250px; margin: 0 auto;"> 
+            <div class="card-body">
+              <h4>{{$ctrl.currProducto.nombre}}</h4>
+              <!-- Estrellas para mostrar la calificación del producto -->
+              <span class="fa fa-star" ng-class="$ctrl.currProducto.rating >= 1?'checked-star':''"></span>
+              <span class="fa fa-star" ng-class="$ctrl.currProducto.rating >= 2?'checked-star':''"></span>
+              <span class="fa fa-star" ng-class="$ctrl.currProducto.rating >= 3?'checked-star':''"></span>
+              <span class="fa fa-star" ng-class="$ctrl.currProducto.rating >= 4?'checked-star':''"></span>
+              <span class="fa fa-star" ng-class="$ctrl.currProducto.rating >= 5?'checked-star':''"></span>
+            </div>
+            <div class="card-body mt-0">
+              <h5>Precio ${{$ctrl.currProducto.precio | number:2 }}</h5>
+              <p class="card-text text-sm">{{$ctrl.currProducto.descripcion}}</p>
+            </div>
+          </div>
+          
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Cancelar</button>
+          <!-- Botón para agregar el producto al carrito -->
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" ng-click="$ctrl.add($ctrl.currProducto.prod_id)">
+            <i class="bi bi-cart-plus"></i> Agregar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

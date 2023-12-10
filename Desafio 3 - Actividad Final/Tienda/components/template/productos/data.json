@@ -1,0 +1,102 @@
+{
+    "categorias": [
+        {
+            "cat_id": "1",
+            "cat_nombre": "Aventura"
+        },
+        {
+            "cat_id": "2",
+            "cat_nombre": "Romance"
+        },
+        {
+            "cat_id": "3",
+            "cat_nombre": "Terror"
+        },
+        {
+            "cat_id": "4",
+            "cat_nombre": "Ciencia Ficción"
+        }
+        
+    ],
+    
+    "productos": [
+        {
+            "prod_id": "1",
+            "cat_id": "1",
+            "nombre": "Juego de Tronos",
+            "precio": 40.23,
+            "descripcion": "La trama se sitúa en un mundo ficticio con elementos fantásticos, como dragones y poderes, pero también otros muy reales como son las luchas de poder, los enfrentamientos políticos, las traiciones y la continua guerra por el trono que gobierna los siete reinos de Poniente.",
+            "in_stock": true,
+            "cantidad": 10,
+            "rating": 4,
+            "imagen": "assets/images/Juego de tronos.jpg",
+            "instock": true
+        },
+
+        {
+            "prod_id": "2",
+            "cat_id": "2",
+            "nombre": "Orgullo y Prejuicio",
+            "precio": 25.40,
+            "descripcion": "La novela muestra a una Elizabeth ingeniosa que despliega una  fina ironía cada vez que entabla conversación con él. Al mismo tiempo,  Darcy, va admirando a Elizabeth a medida que la conoce más.",
+            "in_stock": true,
+            "cantidad": 11,
+            "rating": 5,
+            "imagen": "assets/images/Orgullo y Prejuicio.jpg",
+            "instock": true
+        },
+
+        {
+            "prod_id": "3",
+            "cat_id": "3",
+            "nombre": "El baile de los Muertos",
+            "precio": 30.50,
+            "descripcion": "Isabel es una joven reina que se siente traicionada por todos los que la rodean. Lilia es ladrona de tumbas cuyo único sueño es marcharse lejos de casa de su tío, con quien vive míseramente desde que murieron sus padres. Fidel es un huérfano a quien acosa cada noche el fantasma de su doble, sin que él comprenda por qué.",
+            "in_stock": true,
+            "cantidad": 8,
+            "rating": 3,
+            "imagen": "assets/images/Baile.webp",
+            "instock": true
+        },
+
+        {
+            "prod_id": "4",
+            "cat_id": "4",
+            "nombre": "El Despertar del Leviatan",
+            "precio": 54.99,
+            "descripcion": "La humanidad ha colonizado el Sistema Solar: Marte, la Luna, el cinturón de asteroides y más allá, pero las estrellas aún están fuera de nuestro alcance. Jim Holden es segundo de a bordo de un transportador de hielo que realiza misiones entre los anillos de Saturno y las estaciones mineras del Cinturón. Cuando su tripulación y él se topan con la Scopuli, una nave abandonada, descubren un secreto que desearían no haber encontrado. Un secreto por el que alguien sería capaz de matar, matar a una escala que Jim y su tripulación no imaginan.",
+            "in_stock": true,
+            "cantidad": 5,
+            "rating": 2,
+            "imagen": "assets/images/Leviatan.jpg",
+            "instock": true
+        },
+
+        {
+            "prod_id": "5",
+            "cat_id": "4",
+            "nombre": "La Ciudad de las Mentiras",
+            "precio": 60.99,
+            "descripcion": "El hijo recién nacido del difunto faraón muere asesinado en su cuna. Anksenamún, madre del niño y viuda de Tutankamón, solicita la presencia de Huy para investigar el turbio complot. Con su proverbial sensatez, Huy intenta aplacar los ánimos, pero la corte se halla sumida en el caos, y la razón nada puede contra la violencia dominante. Ayudado por su compañera Sensenebe, Huy se adentrará en un laberinto de ambiciones desmesuradas y pérfidas mentiras donde nadie está a salvo.",
+            "in_stock": true,
+            "cantidad": 15,
+            "rating": 1,
+            "imagen": "assets/images/Ciudad.jpg",
+            "instock": true
+        },
+
+        {
+            "prod_id": "5",
+            "cat_id": "1",
+            "nombre": "La Leyenda del Ladron",
+            "precio": 49.50,
+            "descripcion": "Prepárate a transportarte a la Sevilla del xvi, a un fascinante mundo de mendigos y prostitutas, nobles y comerciantes, espadachines y ladrones. El amor, la pasión y la venganza son los pilares de esta magistral novela de aventuras en torno a un niño salvado misteriosamente de la muerte, que crecerá para erigirse en la última esperanza de los desfavorecidos. El destino de Sancho y el de quienes le rodean hunde sus raíces en los secretos orígenes de la literatura. Su historia te cambiará para siempre.",
+            "in_stock": true,
+            "cantidad": 15,
+            "rating": 1,
+            "imagen": "assets/images/Leyenda.jpg",
+            "instock": true
+        }
+
+    ]
+}
